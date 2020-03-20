@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Add from './components/organisms/add'
+import List from './components/organisms/list'
+import useToDoState from './hooks/useToDoState'
+import Heading from './components/atoms/heading'
+
+import './App.scss';
 
 function App() {
+  const {
+    list,
+    addTask,
+    updateStatus,
+    removeItem
+  } = useToDoState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main className="app">
+      <header className="app__header">
+        <Heading type="h2" className="app__header__heading">TO-DO</Heading>
       </header>
-    </div>
+      <section className="app__section">
+        <Add addTask={addTask} />
+        <List list={list} updateStatus={updateStatus} removeItem={removeItem} />
+      </section>
+    </main>
   );
 }
 
