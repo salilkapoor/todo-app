@@ -1,10 +1,12 @@
 # TO-DO App
 
-This is a TO-DO app build with react, styled with sass.
+This is a TO-DO app build with react, styled with sass and provides audit for Performance, Accessibility<br />
+SEO, Best-practises with Google's Lighthouse CLI integration.
 
 ## Features
 
-This TO-DO react app provides integration with lighthouse and provides report for audits.
+This TO-DO react app provides integration with lighthouse and report for audits based on various categories.<br />
+Reports are provided in .json, .html format.
 
 ## App Capabilities
 1) Add a task
@@ -33,6 +35,7 @@ reports can be found under lighthouse/reports/----<br />
     1. initial.(all) -> these were the reports generated initially
 
 ## Scripts
+
 ### `yarn run lighthouse`
 Runs the lighthouse script<br />
 and opens the report in browser.
