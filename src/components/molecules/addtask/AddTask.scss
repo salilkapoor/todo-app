@@ -1,6 +1,11 @@
 @import '../../../styles/main.scss';
 
 .addtask {
+    &__label {
+        font-size: 1.1rem;
+        font-weight: 700;
+        display: block;
+    }
     &__input {
         outline: none;
         margin-right: 0.8rem;
