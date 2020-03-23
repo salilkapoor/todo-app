@@ -23,3 +23,36 @@ Resets and variables are created under styles folder.
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Lighthouse
+
+Config for lighthouse can be found under lighthouse/config/config.js
+reports can be found under lighthouse/reports/----
+    1. initial.(all) -> these were the reports generated initially
+
+## Scripts
+### `yarn run lighthouse`
+Runs the lighthouse script<br />
+and opens the report in browser.
+
+### Explanation
+
+"lighthouse http://localhost:3000 --config-path=./lighthouse/config/config.js --output json --output html --output-path ./lighthouse/reports/initial --quiet --view --chrome-flags=--headless"
+
+http://localhost:3000 - url on which we need to see the metrics.
+
+#### input
+Configuration
+`--config-path=./lighthouse/config/config.js` -> Default config can be found here
+
+#### output
+--output json --output html --output-path ./lighthouse/reports/initial ->
+
+`--output json --output html` -> generates report in json and html format
+`--output-path` -> generates report at the path specific
+
+`--quiet` -> 
+If you want the report to run silently you can use the following argument
+`--view` -> 
+With the “view” argument, your report opens in a chrome window once after it has finished running
+`--chrome-flags=--headless` -> 
+If you don’t want the Chrome browser pop-up to open we need to provide this argument
