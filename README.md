@@ -64,6 +64,10 @@ With the “view” argument, your report opens in a chrome window once after it
 `--chrome-flags=--headless` -> 
 If you don’t want the Chrome browser pop-up to open we need to provide this argument<br />
 
+`--extra-headers=./lighthouse/config/custom-headers.json` -> 
+At times, there are some custom headers that are required to be send in http request, these<br />
+can be override by this argument<br />
+
 ## References
 
 | Type | Description  | URL  |
@@ -71,6 +75,5 @@ If you don’t want the Chrome browser pop-up to open we need to provide this ar
 | Lighthouse Developer | This is an API reference for Lighthouse. | https://developers.google.com/web/tools/lighthouse |
 | Lighthouse Configuration | Configurations explained for Lighthouse CLI. | https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md |
 | Lighthouse GIT repo | GIT repo link to Lighthouse. | https://github.com/GoogleChrome/lighthouse |
-
-
-
+| Lighthouse Scoring & Basic Terms | Docs link which can explain insights about how scores are calculated. | https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted |
+| Chrome Flags | List of Chromium Command Line Switches --headless used at the top. | http://peter.sh/experiments/chromium-command-line-switches/|
