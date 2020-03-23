@@ -23,10 +23,10 @@ Resets and variables are created under styles folder.
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Lighthouse
+# Lighthouse
 
-Config for lighthouse can be found under lighthouse/config/config.js
-reports can be found under lighthouse/reports/----
+Config for lighthouse can be found under lighthouse/config/config.js<br />
+reports can be found under lighthouse/reports/----<br />
     1. initial.(all) -> these were the reports generated initially
 
 ## Scripts
@@ -34,7 +34,7 @@ reports can be found under lighthouse/reports/----
 Runs the lighthouse script<br />
 and opens the report in browser.
 
-### Explanation
+### Script Explanation
 
 "lighthouse http://localhost:3000 --config-path=./lighthouse/config/config.js --output json --output html --output-path ./lighthouse/reports/initial --quiet --view --chrome-flags=--headless"
 
@@ -47,12 +47,14 @@ Configuration
 #### output
 --output json --output html --output-path ./lighthouse/reports/initial ->
 
-`--output json --output html` -> generates report in json and html format
+`--output json --output html` -> generates report in json and html format<br />
 `--output-path` -> generates report at the path specific
 
 `--quiet` -> 
-If you want the report to run silently you can use the following argument
+If you want the report to run silently you can use the following argument<br />
+
 `--view` -> 
-With the “view” argument, your report opens in a chrome window once after it has finished running
+With the “view” argument, your report opens in a chrome window once after it has finished running<br />
+
 `--chrome-flags=--headless` -> 
-If you don’t want the Chrome browser pop-up to open we need to provide this argument
+If you don’t want the Chrome browser pop-up to open we need to provide this argument<br />
