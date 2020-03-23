@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({type, className, onChange, children }) => {
-  return React.createElement('input',  { className, type, onChange }, children);
+const Input = ({type, className, onChange, id, children }) => {
+  return React.createElement('input',  { className, type, onChange, id }, children);
 };
 
 Input.propTypes = {

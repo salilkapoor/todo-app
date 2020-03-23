@@ -18,8 +18,14 @@ const AddTask = ({addTask}) => {
 
     return (
         <>
-            <Input className="addtask__input" onChange={e=>setTaskHandler(e)}/>
-            <Button className="addtask__button" onClick={addTaskHandler}>Add Task</Button>
+        {/**
+         * [FIX_LIGHTHOUSE_REPORT]
+         * Accessibility fix is added at line# 24, Label associated with the input field is added.
+         * In order to make it accessible compliant.
+         */}
+        <label htmlFor='addTask' className="addtask__label">ADD TASK</label>
+        <Input id='addTask' className="addtask__input" onChange={e=>setTaskHandler(e)}/>          
+        <Button className="addtask__button" onClick={addTaskHandler}>Add Task</Button>
         </>
     )
 }
