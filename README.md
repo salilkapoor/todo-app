@@ -77,6 +77,6 @@ can be override by this argument<br />
 | ------- | --- | --- |
 | Lighthouse Developer | This is an API reference for Lighthouse. | [Google Docs](https://developers.google.com/web/tools/lighthouse)|
 | Lighthouse Configuration | Configurations explained for Lighthouse CLI. | [Repo's README.md File](https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md)  |
-| Lighthouse GIT repo | GIT repo link to Lighthouse. | https://github.com/GoogleChrome/lighthouse |
-| Lighthouse Scoring & Basic Terms | Docs link which can explain insights about how scores are calculated. | https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted |
-| Chrome Flags | List of Chromium Command Line Switches --headless used at the top. | http://peter.sh/experiments/chromium-command-line-switches/|
+| Lighthouse GIT repo | GIT repo link to Lighthouse. | [Github Repo](https://github.com/GoogleChrome/lighthouse)|
+| Lighthouse Scoring & Basic Terms | Docs link which can explain insights about how scores are calculated. | [Repo's README.md File](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted)|
+| Chrome Flags | List of Chromium Command Line Switches --headless used at the top. | [Link to refer Chrome Falgs](http://peter.sh/experiments/chromium-command-line-switches/)|
