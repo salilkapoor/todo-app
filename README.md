@@ -3,6 +3,9 @@
 This is a TO-DO app build with react, styled with sass.
 
 ## Features
+
+This TO-DO react app provides integration with lighthouse and provides report for audits.
+
 ## App Capabilities
 1) Add a task
 2) See the list - pending, completed tasks
@@ -38,6 +41,8 @@ and opens the report in browser.
 
 "lighthouse http://localhost:3000 --config-path=./lighthouse/config/config.js --output json --output html --output-path ./lighthouse/reports/initial --quiet --view --chrome-flags=--headless"
 
+### url
+
 http://localhost:3000 - url on which we need to see the metrics.
 
 #### input
@@ -58,3 +63,14 @@ With the “view” argument, your report opens in a chrome window once after it
 
 `--chrome-flags=--headless` -> 
 If you don’t want the Chrome browser pop-up to open we need to provide this argument<br />
+
+## References
+
+| Type | Description  | URL  |
+| ------- | --- | --- |
+| Lighthouse Developer | This is an API reference for Lighthouse. | https://developers.google.com/web/tools/lighthouse |
+| Lighthouse Configuration | Configurations explained for Lighthouse CLI. | https://github.com/GoogleChrome/lighthouse/blob/master/docs/configuration.md |
+| Lighthouse GIT repo | GIT repo link to Lighthouse. | https://github.com/GoogleChrome/lighthouse |
+
+
+
