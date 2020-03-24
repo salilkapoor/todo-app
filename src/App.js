@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 
 import Add from './components/organisms/add'
 import List from './components/organisms/list'
@@ -6,6 +6,10 @@ import useToDoState from './hooks/useToDoState'
 import Heading from './components/atoms/heading'
 
 import './App.scss';
+
+const clockPerformance = (profilerId, mode, actualTime, baseTime, startTime, commitTime, interactions ) => {
+  console.info({profilerId, mode, actualTime, baseTime, startTime, commitTime, interactions });
+}
 
 function App() {
   const {
@@ -21,7 +25,9 @@ function App() {
       </header>
       <section className="app__section">
         <Add addTask={addTask} />
-        <List list={list} updateStatus={updateStatus} removeItem={removeItem} />
+        <Profiler id="List-Component" onRender={clockPerformance}>
+          <List list={list} updateStatus={updateStatus} removeItem={removeItem} />
+        </Profiler>
       </section>
     </main>
   );
