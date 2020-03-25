@@ -7,6 +7,7 @@ import './AddTask.scss';
 
 const AddTask = ({addTask}) => {
     const [task, setTask] = useState();
+    // console.warn('Potential memory optimization required as Add Task is re-rendered');
 
     const addTaskHandler = () => {
         addTask(task)
@@ -30,4 +31,4 @@ const AddTask = ({addTask}) => {
     )
 }
 
-export default AddTask;
+export default React.memo(AddTask);

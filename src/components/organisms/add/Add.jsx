@@ -14,4 +14,4 @@ const Add = ({addTask}) => {
     )
 }
 
-export default Add;
+export default React.memo(Add);
