@@ -55,7 +55,7 @@ const reducer = (currentState, action) => {
 
 const useToDoState = () => {
     const [toDoState, dispatch] = useReducer(reducer, initialState);
-
+    
     const addTask = useCallback((task) => {
         const taskObj = {
             date: new Date().toISOString(),
@@ -64,6 +64,21 @@ const useToDoState = () => {
         }
         dispatch({ type: ADD_TASK, item: taskObj })
     }, []);
+
+    /**
+    * [FIX_LIGHTHOUSE_REPORT]
+    * useCallback demonstration
+    */
+
+    // const addTask = (task) => {
+    //     console.log('add');
+    //     const taskObj = {
+    //         date: new Date().toISOString(),
+    //         task,
+    //         status: 'pending'
+    //     }
+    //     dispatch({ type: ADD_TASK, item: taskObj })
+    // };
 
     const updateStatus = useCallback((id) => {
         dispatch({ type: UPDATE_STATUS, id })
@@ -81,4 +96,4 @@ const useToDoState = () => {
     }
 }
 
-export default useToDoState
+export default useToDoState;

@@ -16,4 +16,4 @@ Heading.defaultProps = {
   type: 'h2',
 };
 
-export default Heading;
+export default React.memo(Heading);
