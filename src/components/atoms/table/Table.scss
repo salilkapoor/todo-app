@@ -30,6 +30,6 @@
     }    
 }
 
-.table:last-child {
+.table:not(:first-child) {
     margin-top: 1rem;
 }
