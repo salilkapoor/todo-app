@@ -79,8 +79,6 @@ can be override by this argument<br />
 
 Analyze and debug JavaScript code through source maps.
 
-### Source Map Explorer
-
 ### Scripts
 
 #### `yarn run analyze`
