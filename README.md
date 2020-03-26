@@ -1,7 +1,9 @@
 # TO-DO App
 
 This is a TO-DO app build with react, styled with sass and provides audit for Performance, Accessibility<br />
-SEO, Best-practises with Google's Lighthouse CLI integration.
+SEO, Best-practices with Google's Lighthouse CLI integration.<br />
+This app also provides budgeting with size-limit integration of 1.5 s of threshold. Bundle can be analyze<br />
+by source-map-explorer.
 
 ## Features
 
@@ -71,6 +73,53 @@ If you don’t want the Chrome browser pop-up to open we need to provide this ar
 At times, there are some custom headers that are required to be send in http request, these<br />
 can be override by this argument<br />
 
+# Build Analyzer
+
+`source-map-explorer` is used as a bundle analyzer as it shows tree map visualization.
+
+## Why source-map-explorer?
+
+Analyze and debug JavaScript code through source maps.
+
+### Scripts
+
+#### `yarn run analyze`
+Runs the analyze script<br />
+and opens the tree map in browser.
+
+# Size Limit
+
+`size-limit` to budget the app.
+
+### Scripts
+
+#### `yarn run size`
+Runs the analyze script<br />
+and shows report as below for pass & fail respectively.
+
+##### Success
+
+```
+    Time limit:   1.5 s
+    Size:         43.4 KB
+    Loading time: 868 ms  on slow 3G
+    Running time: 446 ms  on Snapdragon 410
+    Total time:   1.4 s
+```
+  
+
+##### Error
+
+```
+    Total time limit has exceeded
+    Time limit:   1 s
+    Size:         43.4 KB
+    Loading time: 868 ms  on slow 3G
+    Running time: 398 ms  on Snapdragon 410
+    Total time:   1.3 s
+```
+  
+
 ## References
 
 | Type | Description  | URL  |
@@ -80,3 +129,4 @@ can be override by this argument<br />
 | Lighthouse Code repo | GIT repo link to Lighthouse. | [Github Repo](https://github.com/GoogleChrome/lighthouse)|
 | Lighthouse Scoring & Terms Explained | Docs link which can explain insights about how scores are calculated. | [Repo's README.md File](https://github.com/GoogleChrome/lighthouse/blob/d2ec9ffbb21de9ad1a0f86ed24575eda32c796f0/docs/scoring.md#how-are-the-scores-weighted)|
 | Chrome Flags | List of Chromium Command Line Switches --headless used at the top. | [Link to refer Chrome Flags](http://peter.sh/experiments/chromium-command-line-switches/)|
+| source-map-explorer | details about the package, scripts & arguments to refer. | [Link to refer NPM package](https://www.npmjs.com/package/source-map-explorer)|
