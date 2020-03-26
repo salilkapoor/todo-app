@@ -85,6 +85,33 @@ Analyze and debug JavaScript code through source maps.
 Runs the analyze script<br />
 and opens the tree map in browser.
 
+# Size Limit
+
+`size-limit` to budget the app.
+
+### Scripts
+
+#### `yarn run size`
+Runs the analyze script<br />
+and shows report as below for pass & fail respectively.
+
+##### Success
+
+`Time limit:   1.5 s
+  Size:         43.4 KB
+  Loading time: 868 ms  on slow 3G
+  Running time: 446 ms  on Snapdragon 410
+  Total time:   1.4 s`
+
+##### Error
+
+`Total time limit has exceeded
+  Time limit:   1 s
+  Size:         43.4 KB
+  Loading time: 868 ms  on slow 3G
+  Running time: 398 ms  on Snapdragon 410
+  Total time:   1.3 s`
+
 ## References
 
 | Type | Description  | URL  |
