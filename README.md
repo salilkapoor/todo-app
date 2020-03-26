@@ -1,7 +1,9 @@
 # TO-DO App
 
 This is a TO-DO app build with react, styled with sass and provides audit for Performance, Accessibility<br />
-SEO, Best-practises with Google's Lighthouse CLI integration.
+SEO, Best-practices with Google's Lighthouse CLI integration.<br />
+This app also provides budgeting with size-limit integration of 1.5 s of threshold. Bundle can be analyze<br />
+by source-map-explorer.
 
 ## Features
 
@@ -97,20 +99,26 @@ and shows report as below for pass & fail respectively.
 
 ##### Success
 
-`Time limit:   1.5 s<br />
-  Size:         43.4 KB<br />
-  Loading time: 868 ms  on slow 3G<br />
-  Running time: 446 ms  on Snapdragon 410<br />
-  Total time:   1.4 s`<br />
+```
+    Time limit:   1.5 s
+    Size:         43.4 KB
+    Loading time: 868 ms  on slow 3G
+    Running time: 446 ms  on Snapdragon 410
+    Total time:   1.4 s
+```
+  
 
 ##### Error
 
-`Total time limit has exceeded<br />
-  Time limit:   1 s<br />
-  Size:         43.4 KB<br />
-  Loading time: 868 ms  on slow 3G<br />
-  Running time: 398 ms  on Snapdragon 410<br />
-  Total time:   1.3 s`<br />
+```
+    Total time limit has exceeded
+    Time limit:   1 s
+    Size:         43.4 KB
+    Loading time: 868 ms  on slow 3G
+    Running time: 398 ms  on Snapdragon 410
+    Total time:   1.3 s
+```
+  
 
 ## References
 
