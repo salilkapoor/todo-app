@@ -5,6 +5,7 @@ import List from './components/organisms/list'
 import useToDoState from './hooks/useToDoState'
 import Heading from './components/atoms/heading'
 import { clockPerformance } from './utils/utils'
+import Guidelines from './components/organisms/guidelines'
 
 import './App.scss';
 
@@ -20,7 +21,10 @@ function App() {
   return (
     <main className="app">
       <header className="app__header">
-        <Heading type="h2" className="app__header__heading">TO-DO</Heading>
+        <Heading type="h2" className="app__header__heading">
+          TO-DO 
+          <Guidelines />
+        </Heading>
       </header>
       <section className="app__section">
         <Profiler id="Add-Component" onRender={clockPerformance}>

@@ -9,6 +9,7 @@
     background: $token-grey-color-1;
     height: 60px;
     &__heading {
+      display: flex;
       margin: 0;
       padding: 0.9rem;
     }
