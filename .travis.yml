@@ -8,6 +8,6 @@ jobs:
               - yarn test
         - stage: deploy
           name: "Deploy to heroku"
-          if: branch = master
+          if: branch = develop
           before_deploy:
               - yarn build
