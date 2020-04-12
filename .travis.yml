@@ -1,17 +1,13 @@
 language: node_js
 node_js:
-  - "stable"
-cache:
-  directories:
-  - node_modules
-script:
-  - npm test
-  - npm run build
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  local_dir: build
-  on:
-    branch: develop
+    - "12"
+jobs:
+    include:
+        - stage: test
+          script:
+              - yarn test
+        - stage: deploy
+          name: "Deploy to heroku"
+          if: branch = master
+          before_deploy:
+              - yarn build
