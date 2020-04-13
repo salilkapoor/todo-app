@@ -12,7 +12,7 @@ const Portal = ({ children }) => {
 
   useEffect(() => {
     modalRoot && modalRoot.appendChild(el);
-    return () => modalRoot.removeChild(el);
+    return () => modalRoot && modalRoot.removeChild(el);
   }, [el, modalRoot]);
   return createPortal(children, el);
 };
