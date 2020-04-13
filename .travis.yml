@@ -14,7 +14,7 @@ jobs:
           deploy:
               provider: heroku
               app:
-                  master: to-do-app
+                  develop: to-do-app
               on: deploy
               api_key:
                   secure: 21a47b23-7126-4836-ba55-1dc6e1b5fb16
