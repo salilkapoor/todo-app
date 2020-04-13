@@ -17,5 +17,6 @@ jobs:
         master: to-do-action
       on:
         repo: salilkapoor/todo-app
+        all_branches: true
       api_key:
         secure: DsXMLm107S/pQQ8dWvxHUPpHiIZCSYe/sHZhIocbt1p7f9jVn54t5zAS8sGLv7LDlUmJPwhOTrVdwfooCVFCqD5lUsevMDO9mi8y5RywpVrRdy5iPXmQp6ezMgM+dLwtDKCQm+hrrD5LGBQafVEL7hRVB8oqPK6O1a2DbiyEgnW4cT2kxFVP1XDjeOSJWIEbArWfN+VHV/hjNAeCI7gYibcJev9YF2JhWVvFNf+Jn+L7yEUmvvYBE0uyIyqtCJmn9IA9j8D0v57S2mDHTaQ8j0f3UngQvS/kbGp7yuLjyS2WwwngtunJw94SkPJyTPVmEPa9kF9gfZYm6i3QoXBC8mEXTcKCviLr262Jl3XYmhATx+tTT1mRaCiv+FVZWl4XgObCr9WWBPPGvaeeCcObvqq6ZGiYEz/0UGvk4tfmAZW+rKgZ2GVw7wv63fWU6sZNlhF1Bm0RVWlRKrhKZMnNx/VnlaovYzNrnvs2z2MZfNsqXAIEG2xTOQisBM8HwwkO9xSq4DBVNTdgVZWJIVWBiovUCT/TBg64hYINU68bnh8J6m6MktgE6kwHnJOAxu91SrBClNvP3U47T8Yn5ak9aTYodaeXaMyjltGzr3gX7gt6wbqITB+zbIpmfsFMkkeRz5kAXNkSAbbxf0F/5PtxaZ4v6iBPRHBdBPs5Kt7+LNo=
