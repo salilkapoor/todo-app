@@ -1,8 +1,13 @@
-@import './base/variables.scss';
+@import "./base/variables.scss";
 
 body {
-    margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 0.9rem;
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
 }
-  
+
+.markdown-container {
+  color: $token-black-color;
+  font-weight: 500;
+  font-size: 0.9rem;
+}

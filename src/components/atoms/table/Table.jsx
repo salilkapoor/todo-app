@@ -15,4 +15,4 @@ const Table = ({header, children}) => {
     )
 }
 
-export default Table;
+export default React.memo(Table);

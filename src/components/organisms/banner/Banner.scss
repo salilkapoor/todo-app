@@ -1,22 +1,6 @@
 @import '../../../styles/main.scss';
 
-.addtask {
-    &__label {
-        font-size: 1.1rem;
-        font-weight: 700;
-        display: block;
-    }
-    &__input {
-        outline: none;
-        margin-right: 0.8rem;
-        border: 0;
-        border-bottom: 1px solid $token-grey-color;
-        width: 80%;
-        height: 30px;
-    }
-    &__input:focus {
-        border-bottom: 1px solid $token-black-color;
-    }
+.banner {
     &__button {
         border: 1px solid $token-black-color;
         background-color: transparent;
@@ -25,6 +9,11 @@
         box-sizing: content-box;
         font-size: 0.9rem;
     }
+
+    &__button:not(:last-child) {
+        margin-right: 1rem;
+    }
+    
     &__button:hover,
     &__button:focus {
         border: 1px solid $token-black-color;

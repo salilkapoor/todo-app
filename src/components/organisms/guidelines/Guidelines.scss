@@ -1,0 +1,23 @@
+@import "../../../styles/main.scss";
+
+.guidelines {
+  &__button {
+    border: 1px solid $token-black-color;
+    background-color: transparent;
+    border-radius: 50%;
+    box-sizing: content-box;
+    font-size: 0.7rem;
+    margin-left: 0.7rem;
+    padding: 0px 7px;
+    font-weight: 900;
+    line-height: 1rem;
+    background-color: $token-black-color;
+    color: $token-white-color;
+    &:hover,
+    &:focus {
+      border: 1px solid $token-black-color;
+      background-color: transparent;
+      color: $token-black-color;
+    }
+  }
+}

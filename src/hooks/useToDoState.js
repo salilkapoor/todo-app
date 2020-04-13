@@ -1,4 +1,4 @@
-import { useReducer, useCallback } from 'react'
+import { useReducer, useCallback, useMemo } from 'react'
 
 const ADD_TASK = 'ADD_TASK'
 const UPDATE_STATUS = 'UPDATE_STATUS'
@@ -56,14 +56,79 @@ const reducer = (currentState, action) => {
 const useToDoState = () => {
     const [toDoState, dispatch] = useReducer(reducer, initialState);
 
+    /**
+     * [WARNING]
+     * This is explicit developer created complexity. Strictly for demonstration purposes.
+     * DON'T USE THIS AS A REFERENCE ANYWHERE.
+     * 
+     * [FIX_LIGHTHOUSE_REPORT]
+     */
+    const getPriority = useMemo(() => {
+        let priority = '';
+        let val = 10000
+        for (let i = val; i > 0; i--) {
+            priority = '(!!!)'
+        }
+        return priority;
+    }, [])
+
     const addTask = useCallback((task) => {
+        const t0 = performance.now();
+        const taskStr = `${task || 'empty-task'} ${getPriority}`
+        const t1 = performance.now();
+        console.log(`Call to getPriority approx. took %c ${t1 - t0} ms.`,
+            'background: #ccc; color: #ff0000; font-weight:550');
         const taskObj = {
             date: new Date().toISOString(),
-            task,
+            task: taskStr,
             status: 'pending'
         }
         dispatch({ type: ADD_TASK, item: taskObj })
-    }, []);
+    }, [getPriority]);
+
+    /**
+     * [WARNING]
+     * This is explicit developer created complexity. Strictly for demonstration purposes.
+     * DON'T USE THIS AS A REFERENCE ANYWHERE.
+     * 
+     * Below code needs to be enabled for useMemo
+     */
+    // const getPriority = () => {
+    //     let priority = '';
+    //     let val = 10000
+    //     for (let i = val; i > 0; i--) {
+    //         priority = '!!!'
+    //     }
+    //     return priority;
+    // }
+
+    // const addTask = useCallback((task) => {
+    //     const t0 = performance.now();
+    //     const taskStr = `${task || 'empty-task'} -- ${getPriority()}`
+    //     const t1 = performance.now();
+    //     console.log(`Call to getPriority approx. took ${t1 - t0} ms.`);
+    //     const taskObj = {
+    //         date: new Date().toISOString(),
+    //         task: taskStr,
+    //         status: 'pending'
+    //     }
+    //     dispatch({ type: ADD_TASK, item: taskObj })
+    // }, []);
+
+    /**
+    * [FIX_LIGHTHOUSE_REPORT]
+    * useCallback demonstration
+    */
+
+    // const addTask = (task) => {
+    //     console.log('add');
+    //     const taskObj = {
+    //         date: new Date().toISOString(),
+    //         task,
+    //         status: 'pending'
+    //     }
+    //     dispatch({ type: ADD_TASK, item: taskObj })
+    // };
 
     const updateStatus = useCallback((id) => {
         dispatch({ type: UPDATE_STATUS, id })
@@ -81,4 +146,4 @@ const useToDoState = () => {
     }
 }
 
-export default useToDoState
+export default useToDoState;

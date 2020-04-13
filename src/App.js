@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Profiler, Suspense } from 'react';
 
 import Add from './components/organisms/add'
 import List from './components/organisms/list'
 import useToDoState from './hooks/useToDoState'
 import Heading from './components/atoms/heading'
+import { clockPerformance } from './utils/utils'
+import Guidelines from './components/organisms/guidelines'
 
 import './App.scss';
+
+const Banner = React.lazy(() => import('./components/organisms/banner'));
 
 function App() {
   const {
@@ -17,14 +21,28 @@ function App() {
   return (
     <main className="app">
       <header className="app__header">
-        <Heading type="h2" className="app__header__heading">TO-DO</Heading>
+        <Heading type="h2" className="app__header__heading">
+          TO-DO Tasks
+          <Guidelines />
+        </Heading>
       </header>
       <section className="app__section">
-        <Add addTask={addTask} />
-        <List list={list} updateStatus={updateStatus} removeItem={removeItem} />
+        <Profiler id="Add-Component" onRender={clockPerformance}>
+          <Add addTask={addTask} />
+        </Profiler>
+
+        <Profiler id="List-Component" onRender={clockPerformance}>
+          <List list={list} updateStatus={updateStatus} removeItem={removeItem} />
+        </Profiler>
+
+        <Profiler id="Banner-Component" onRender={clockPerformance}>
+          <Suspense fallback={<h4>Loading...</h4>}>
+            <Banner addTask={addTask} />
+          </Suspense>
+        </Profiler>
       </section>
-    </main>
+    </main >
   );
 }
 
-export default App;
+export default React.memo(App);

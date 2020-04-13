@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- lts/*
+jobs:
+  include:
+  - stage: test
+    script:
+    - yarn test
+  - stage: deploy
+    name: Deploy to heroku
+    if: branch = develop || master
+    before_deploy:
+    - yarn build
+    deploy:
+      skip_cleanup: true
+      provider: heroku
+      app:
+        master: to-do-action
+        develop: to-do-action
+      on:
+        repo: salilkapoor/todo-app
+        all_branches: true
+      api_key:
+        secure: HMI2y0sF9FqP4Wo7vHzWAIijVsIxaAY8ZBhMhfNTDUioKSNdmMp2NJ/RdvfqHm1/RI3VVnYWVqgz/lKDDBUmVRKf3DZyUuFUWHuRzIZMhOsC/6TVk9/xWJwYDlMJJ0/DmxUna8An2batUl7c3mUUze3dzDJDWpQUtGhhd1IOTrqrFeYrIMPodQLe9p8jROOlHH62BWwZeM36RAdT2ZkkaXBG02Y6pILNqn4kh5lNQS3Vv2hEukjgkLfSRG8FjATVh5KxppPmDyPrDMLDbKwZn/i2wX/tlsHemQhgXZJQ4VpAU2DWPBNPmhF9OGDlIzYyUoFnfrdygfC+XcgtccWhTffoqKPfOsiYeHqD/09qdDvMjev4rq5zEwFC83wmuNPN5qLHPs15tJsPwxc+3M3SH6K7ykeO0jsw0dipE+uPbYbWKuSASqMgXQG4syjs+sLEr4qY6k73QYRLRpUavX8URZoONLohVeY98eW4zlYWtQ9UFPThLA4i6+TNJAI4fAPjeoa+3QnMderm5Q13ZJv/vOz1F6O+rwSRbSoF5FaqvqRbCChlwjNI1/Z1dEJ+UHDDbISAzxszr18fFkkCCXPL4l6emtG1FGkyuQ0Z9xzC4iXuA9TXzsQlSBHUSS/KVxTFlkUcGL08vT83tcger8wlSM61UjXF8GZxLU3vI1N6y8A=
