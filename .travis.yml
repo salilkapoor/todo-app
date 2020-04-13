@@ -16,6 +16,7 @@ jobs:
       provider: heroku
       app:
         master: to-do-action
+        develop: to-do-action
       on:
         repo: salilkapoor/todo-app
         all_branches: true
