@@ -22,7 +22,7 @@ function App() {
     <main className="app">
       <header className="app__header">
         <Heading type="h2" className="app__header__heading">
-          TO-DO 
+          TO-DO Tasks
           <Guidelines />
         </Heading>
       </header>

@@ -16,7 +16,7 @@ const Modal = function ({ buttonHandler }) {
             className="modal__wrapper__header__button"
             onClick={() => buttonHandler(false)}
           >
-            <img src="https:icon.now.sh/x/ff0000" alt="close" />
+            <img src="https://icon.now.sh/x/000000" alt="close" />
           </button>
         </div>
         <div className="modal__wrapper__body">
