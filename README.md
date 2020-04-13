@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/salilkapoor/todo-app.svg?branch=develop)](https://travis-ci.org/salilkapoor/todo-app)
+
 # TO-DO App
 
 This is a TO-DO app build with react, styled with sass and provides audit for Performance, Accessibility<br />
