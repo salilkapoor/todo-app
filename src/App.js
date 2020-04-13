@@ -23,7 +23,7 @@ function App() {
       <header className="app__header">
         <Heading type="h2" className="app__header__heading">
           TO-DO 
-          <Guidelines />
+          {/* <Guidelines /> */}
         </Heading>
       </header>
       <section className="app__section">
