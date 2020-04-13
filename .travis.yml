@@ -14,7 +14,7 @@ jobs:
     deploy:
       provider: heroku
       app:
-        master: todo-app
+        master: to-do-action
       on: develop
       api_key:
         secure: HAFj/BZIs0V15+lUL/ztR8CCO5aOd2zR89BQBCD3dG9nA43iLTvtl6EW48TtxOYkJem8zPM7hRItGZv35MYgV31nzUAYu6gpe7px45PI5/0sGag24bLIh23e7aOOKl82gvXyvHtQIsfxddVmOdCA7aBruvwWuW1+PUjljksgk+aeb/fKSaWYu4NNR3v0by3/bF2MDWkYZNtdaI+LEtbDUrVbnQezNHw48I/pjsic9/L6mt7kzAgrUzQVpaO7f2QRYZjxoSVpkDvja0XctxRq00RNeGiZi4UrPD31Cvj+ch4U/azn1PGz5nBFLIMg/31YlgFcm2EqV0aAaOBYCFtX22fLWN2DpygYLyyioWtYWBuKj839fsTQ21kEtVW0fI2cb5m+fjtrywW4WiG2QF7vc9Cy89GjK8N85h82QfIafaTqfzmkho2SktKJfbKV6UvFJx7gSh7t3WahVkl7fzQM+qn+Ri6XLPeO4zc+/CW62M83YmAJMzeo1msLOPxM8awK1UorcvUCKZmH+Z9ZtejvERoKOVWP8Qy/8c0O3YXIQhg7r6PN5P/BbNx34C8kEyMAaSLUJBYA0i4kW39K92bcsYOGUFTkEDh2Aw2aF/Y1CViqwrmGeAPeI4q2hsyfk0G8boEdVIdSizDng+HrtFELF+5nOWu0qVV2OiizUWUrByY=
