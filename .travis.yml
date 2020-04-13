@@ -8,7 +8,7 @@ jobs:
     - yarn test
   - stage: deploy
     name: Deploy to heroku
-    if: branch = develop
+    if: branch = develop || master
     before_deploy:
     - yarn build
     deploy:
@@ -20,4 +20,4 @@ jobs:
         repo: salilkapoor/todo-app
         all_branches: true
       api_key:
-        secure: DsXMLm107S/pQQ8dWvxHUPpHiIZCSYe/sHZhIocbt1p7f9jVn54t5zAS8sGLv7LDlUmJPwhOTrVdwfooCVFCqD5lUsevMDO9mi8y5RywpVrRdy5iPXmQp6ezMgM+dLwtDKCQm+hrrD5LGBQafVEL7hRVB8oqPK6O1a2DbiyEgnW4cT2kxFVP1XDjeOSJWIEbArWfN+VHV/hjNAeCI7gYibcJev9YF2JhWVvFNf+Jn+L7yEUmvvYBE0uyIyqtCJmn9IA9j8D0v57S2mDHTaQ8j0f3UngQvS/kbGp7yuLjyS2WwwngtunJw94SkPJyTPVmEPa9kF9gfZYm6i3QoXBC8mEXTcKCviLr262Jl3XYmhATx+tTT1mRaCiv+FVZWl4XgObCr9WWBPPGvaeeCcObvqq6ZGiYEz/0UGvk4tfmAZW+rKgZ2GVw7wv63fWU6sZNlhF1Bm0RVWlRKrhKZMnNx/VnlaovYzNrnvs2z2MZfNsqXAIEG2xTOQisBM8HwwkO9xSq4DBVNTdgVZWJIVWBiovUCT/TBg64hYINU68bnh8J6m6MktgE6kwHnJOAxu91SrBClNvP3U47T8Yn5ak9aTYodaeXaMyjltGzr3gX7gt6wbqITB+zbIpmfsFMkkeRz5kAXNkSAbbxf0F/5PtxaZ4v6iBPRHBdBPs5Kt7+LNo=
+        secure: HMI2y0sF9FqP4Wo7vHzWAIijVsIxaAY8ZBhMhfNTDUioKSNdmMp2NJ/RdvfqHm1/RI3VVnYWVqgz/lKDDBUmVRKf3DZyUuFUWHuRzIZMhOsC/6TVk9/xWJwYDlMJJ0/DmxUna8An2batUl7c3mUUze3dzDJDWpQUtGhhd1IOTrqrFeYrIMPodQLe9p8jROOlHH62BWwZeM36RAdT2ZkkaXBG02Y6pILNqn4kh5lNQS3Vv2hEukjgkLfSRG8FjATVh5KxppPmDyPrDMLDbKwZn/i2wX/tlsHemQhgXZJQ4VpAU2DWPBNPmhF9OGDlIzYyUoFnfrdygfC+XcgtccWhTffoqKPfOsiYeHqD/09qdDvMjev4rq5zEwFC83wmuNPN5qLHPs15tJsPwxc+3M3SH6K7ykeO0jsw0dipE+uPbYbWKuSASqMgXQG4syjs+sLEr4qY6k73QYRLRpUavX8URZoONLohVeY98eW4zlYWtQ9UFPThLA4i6+TNJAI4fAPjeoa+3QnMderm5Q13ZJv/vOz1F6O+rwSRbSoF5FaqvqRbCChlwjNI1/Z1dEJ+UHDDbISAzxszr18fFkkCCXPL4l6emtG1FGkyuQ0Z9xzC4iXuA9TXzsQlSBHUSS/KVxTFlkUcGL08vT83tcger8wlSM61UjXF8GZxLU3vI1N6y8A=
