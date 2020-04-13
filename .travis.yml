@@ -1,20 +1,21 @@
 language: node_js
 node_js:
-    - lts/*
+- lts/*
 jobs:
-    include:
-        - stage: test
-          script:
-              - yarn test
-        - stage: deploy
-          name: "Deploy to heroku"
-          if: branch = develop
-          before_deploy:
-              - yarn build
-          deploy:
-              provider: heroku
-              app:
-                  master: to-do-app
-              on: develop
-              api_key:
-                  secure: 21a47b23-7126-4836-ba55-1dc6e1b5fb16
+  include:
+  - stage: test
+    script:
+    - yarn test
+  - stage: deploy
+    name: Deploy to heroku
+    if: branch = develop
+    before_deploy:
+    - yarn build
+    deploy:
+      provider: heroku
+      app:
+        master: to-do-app
+      on: develop
+      api_key:
+      secure: ZSZCEqpuFEwa5PhzrDZeiZPw8mlBWQIiXVlxygHjePQmD/lcBbjErMNyXb2eunVK8dFhpUg9Jvp2q3MR0QFk1Dk+nrETXgOZY/8eiNHojZf4r1epY69IEUc1wh08/BR/YQWlTCigtJNp2pVUuull8gFpH8po5uXR9dL1nKIbgY5d9HKOVRrL3ROYafpT0qzY1Z3Hf26ih3DYiQCfFdnTF5UgFWHpWWrAgwscW4G+27Lp0YvrGEPcEd2BVycIVd95Yj2S85v8PW+s1+P5Jw3APZ2MU/Rl+obAUSx3Cn/pjve4sjP/n9h3p2xkoRSVlUOlcx22pc+61pInnGChgUlktFM5YrM24ZrvM8GIumTXOpX87mChawHbr+9ExMi//U07jKf0xuGi0Sr8XYOrDuwLtR5C3PnWgBzzJiBpgmiZF0cwRhxO4ZYJ2F/L/Voy99uB5oxWlJgueUctGn+8DiAYvtIb2/sOt8XIf1Vf9NWz1hnP3PszAvUKpiKRgxtSLstWd/IAFe04tMV4jNReltzEhzfkrZuhEUmKbmEUGJgLHt3M87Si1zq5gyCDZJUF7/E7Ngw6P5QnAxRzGKjJnZb2uwvno8RtHsBNVMstk4Kqg/lNxeeWJ/3ImzamI6xtvG1c92rcC56eAHQ8cBaKRiCmC28b5ps2goGuCEU6d4HELUo=
+  
