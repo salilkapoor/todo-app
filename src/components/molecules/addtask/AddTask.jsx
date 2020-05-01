@@ -22,7 +22,7 @@ const AddTask = ({addTask}) => {
         {/**
          * [FIX_LIGHTHOUSE_REPORT]
          * Accessibility fix is added at line# 24, Label associated with the input field is added.
-         * In order to make it accessible compliant.
+         * In order to make it accessible compliant and fix provided.
          */}
         <label htmlFor='addTask' className="addtask__label">ADD TASK</label>
         <Input id='addTask' className="addtask__input" onChange={e=>setTaskHandler(e)}/>          
